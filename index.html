@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 m-auto">
+                <div id="expenseBox">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="income box">Income : $0</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="expense box">Expense : $0</div>
+                        </div>
+                    </div>
+                    <div class="balance box">Your Ballance : $0</div>
+                </div>
+                <div id="history">
+                    <p class="header">History : </p>
+                    <div id="historyContainer"></div>
+                </div>
+                <div id="newTransaction">
+                    <form action="">
+                        <p class="header">Add new Expense</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input id="expenseTextInput" placeholder="Enter your Title" type="text">
+                        </div>
+                        <div class="col-md-6">
+                    <input id="expenseAmountInput" placeholder="Enter amount" type="number">
+                        </div>
+                    </div>
+                    <select name="" id="expenseType">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                    </select>
+                    <input type="submit"></input>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

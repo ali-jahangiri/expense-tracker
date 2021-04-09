@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+// resetting arrow handler style
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+}
+
+// color schema 
+$green : #3a6351;
+$cream : #f2edd7;
+$orange : #e48257;
+$brown : #393232;
+
+body {font-family: 'Open Sans', sans-serif}
+
+.box {
+    border: 2px solid $orange;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+@mixin resultTitle($color) {
+    font-weight: 700;
+    font-size: 2.0rem;
+    color: $color;
+}
+.income {
+    @include resultTitle(green)
+}
+.expense {
+    @include resultTitle(red)
+}
+.balance {
+    @include resultTitle(rgba(0, 0, 0, 0.623));
+}
+#newTransaction {
+    margin-top: 1rem;
+    border-top: 2px solid $cream;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        input , select {
+            margin: 1rem 0;
+            border: 2px solid $green;
+            padding: 0.6rem;
+            border-radius: 6px;
+            transition: 0.3s ease-in;
+            width: 100%;
+            
+            &:focus {
+                box-shadow: 0 0 0px 6px lighten($green, $amount: 45%);
+            }
+            &[type=submit] {
+                background-color: $brown;
+                border-color: $brown;
+                color: white;
+                font-weight: 700;
+                &:focus {
+                    box-shadow: 0 0 0px 6px lighten($brown, $amount: 45%);
+                }
+            }
+        }
+    }
+}
+
+%history__item {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: 2px solid rgba(128, 128, 128, 0.274);
+    margin: 1rem 0;
+    padding: 1rem;
+    position: relative;
+    &::after {
+        content: "";
+        display: block;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 35%;
+        left: -1.5%;
+    }
+    p {
+        margin: 0;
+        font-weight: 700;
+    }
+}
+.history__item--plus,.history__item--mines {
+    @extend %history__item;
+}
+.history__item--mines {
+    &::after {
+        background-color: red;
+    }
+}
+.history__item--plus {
+    &::after {
+        background-color: $green;
+    }
+}

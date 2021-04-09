@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.box {
+  border: 2px solid #e48257;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.income {
+  font-weight: 700;
+  font-size: 2.0rem;
+  color: green;
+}
+
+.expense {
+  font-weight: 700;
+  font-size: 2.0rem;
+  color: red;
+}
+
+.balance {
+  font-weight: 700;
+  font-size: 2.0rem;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+#newTransaction {
+  margin-top: 1rem;
+  border-top: 2px solid #f2edd7;
+}
+
+#newTransaction form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#newTransaction form input, #newTransaction form select {
+  margin: 1rem 0;
+  border: 2px solid #3a6351;
+  padding: 0.6rem;
+  border-radius: 6px;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  width: 100%;
+}
+
+#newTransaction form input:focus, #newTransaction form select:focus {
+  -webkit-box-shadow: 0 0 0px 6px #b1d1c3;
+          box-shadow: 0 0 0px 6px #b1d1c3;
+}
+
+#newTransaction form input[type=submit], #newTransaction form select[type=submit] {
+  background-color: #393232;
+  border-color: #393232;
+  color: white;
+  font-weight: 700;
+}
+
+#newTransaction form input[type=submit]:focus, #newTransaction form select[type=submit]:focus {
+  -webkit-box-shadow: 0 0 0px 6px #aea3a3;
+          box-shadow: 0 0 0px 6px #aea3a3;
+}
+
+.history__item--plus, .history__item--mines {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 5px;
+  border: 2px solid rgba(128, 128, 128, 0.274);
+  margin: 1rem 0;
+  padding: 1rem;
+  position: relative;
+}
+
+.history__item--plus::after, .history__item--mines::after {
+  content: "";
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 35%;
+  left: -1.5%;
+}
+
+.history__item--plus p, .history__item--mines p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.history__item--mines::after {
+  background-color: red;
+}
+
+.history__item--plus::after {
+  background-color: #3a6351;
+}
+/*# sourceMappingURL=style.css.map */
